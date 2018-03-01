@@ -7,7 +7,7 @@
 
     
 
-    <title>归档：2018 | </title>
+    <title>Java sleep和wait方法的区别 | </title>
     <meta name="author" content="李德东">
     
     <meta name="description" content="记录点滴">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="Java sleep和wait方法的区别"/>
     <meta property="og:site_name" content="李德东的博客"/>
 
     
@@ -225,52 +225,90 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/后端/">后端</a><a class="breadcrumb" href="/categories/后端/Java/">Java</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Java sleep和wait方法的区别</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2018-02-28T07:10:41.000Z"><a href="/2018/02/28/Java-sleep和wait方法的区别/">2018-02-28</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/java/" class="chip pink lighten-1">java</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2018
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2018/02/28/Java-sleep和wait方法的区别/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-02-28T07:10:41.000Z">2018-02-28</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Java sleep和wait方法的区别
-                            </a>
-                        
-                            <a href="/2018/02/23/jsp中页面加载执行顺序/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-02-23T09:16:26.000Z">2018-02-23</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                jsp中页面加载执行顺序
-                            </a>
-                        
-                            <a href="/2018/02/21/我的第一篇博客/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2018-02-21T13:37:01.000Z">2018-02-21</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                我的第一篇博客
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <a href="/tags/sleep/" class="chip pink lighten-1">sleep</a>
         
-    </ul>
+            <a href="/tags/wait/" class="chip pink lighten-1">wait</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry pink-link-context">
+                <ul>
+<li><p>对于sleep()方法，我们首先要知道该方法是属于Thread类中的。而wait()方法，则是属于Object类中的。</p>
+</li>
+<li><p>sleep()方法导致了程序暂停执行指定的时间，让出cpu该其他线程，但是他的监控状态依然保持者，当指定的时间到了又会自动恢复运行状态。</p>
+</li>
+<li><p>在调用sleep()方法的过程中，线程不会释放对象锁。</p>
+</li>
+<li><p>而当调用wait()方法的时候，线程会放弃对象锁，进入等待此对象的等待锁定池，只有针对此对象调用notify()方法后本线程才进入对象锁定池准备获取对象锁进入运行状态。</p>
+</li>
+</ul>
+<a id="more"></a>
+                
+
+
+<p class="pink-link-context">
+    <a href="/2018/02/23/jsp中页面加载执行顺序/" rel="next" title="jsp中页面加载执行顺序">
+    下一篇：jsp中页面加载执行顺序
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
