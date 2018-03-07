@@ -7,7 +7,7 @@
 
     
 
-    <title>sleep | </title>
+    <title>JS按照值传递还是引用传递 | </title>
     <meta name="author" content="李德东">
     
     <meta name="description" content="记录点滴">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="JS按照值传递还是引用传递"/>
     <meta property="og:site_name" content="李德东的博客"/>
 
     
@@ -233,30 +233,92 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（标签）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/前端/">前端</a><a class="breadcrumb" href="/categories/前端/JavaScript/">JavaScript</a>
+
 
         
-            <a class="breadcrumb" href="/tags/sleep/">sleep</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>JS按照值传递还是引用传递</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2018-03-07T02:39:10.000Z"><a href="/2018/03/07/JS按照值传递还是引用传递/">2018-03-07</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2018/02/28/Java-sleep和wait方法的区别/" class="collection-item grey-text text-darken-1">
-                <time datetime="2018-02-28T07:10:41.000Z">2018-02-28</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                Java sleep和wait方法的区别
-            </a>
+            <a href="/tags/参数传递/" class="chip pink lighten-1">参数传递</a>
+        
+            <a href="/tags/值传递/" class="chip pink lighten-1">值传递</a>
+        
+            <a href="/tags/引用传递/" class="chip pink lighten-1">引用传递</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#JS是按值传递还是按引用传递"><span class="section table-of-contents-text">JS是按值传递还是按引用传递</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h2 id="JS是按值传递还是按引用传递"><a href="#JS是按值传递还是按引用传递" class="headerlink" title="JS是按值传递还是按引用传递"></a>JS是按值传递还是按引用传递</h2><p>　　按值传递(call by value)是最常用的求值策略：函数的形参是被调用时所传实参的副本。修改形参的值并不会影响实参。</p>
+<p>　　按引用传递(call by reference)时，函数的形参接收实参的隐式引用，而不再是副本。这意味着函数形参的值如果被修改，实参也会被修改。同时两者指向相同的值。</p>
+<p>　　按引用传递会使函数调用的追踪更加困难，有时也会引起一些微妙的BUG。</p>
+<p>　　按值传递由于每次都需要克隆副本，对一些复杂类型，性能较低。两种传值方式都有各自的问题。</p>
+<p>　　JS的基本类型，是按值传递的。</p>
+<p>&lt;!more–&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 var a = 1;</span><br><span class="line">2 function foo(x) &#123;</span><br><span class="line">3     x = 2;</span><br><span class="line">4 &#125;</span><br><span class="line">5 foo(a);</span><br><span class="line">6 console.log(a); // 仍为1, 未受x = 2赋值所影响</span><br></pre></td></tr></table></figure></p>
+<p>　　再来看看对象的传递：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 var obj = &#123;x : 1&#125;;</span><br><span class="line">2 function foo(o) &#123;</span><br><span class="line">3     o.x = 3;</span><br><span class="line">4 &#125;</span><br><span class="line">5 foo(obj);</span><br><span class="line">6 console.log(obj.x); // 3, 被修改了!</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 var obj = &#123;x : 1&#125;;</span><br><span class="line">2 function foo(o) &#123;</span><br><span class="line">3     o = 100;</span><br><span class="line">4 &#125;</span><br><span class="line">5 foo(obj);</span><br><span class="line">6 console.log(obj.x); // 仍然是1, obj并未被修改为100.</span><br></pre></td></tr></table></figure>
+<p>　　可以看出，对象的值得传递并不是按引用传递。其实，按共享传递 call by sharing，准确的说，JS中的基本类型按值传递，对象类型按共享传递的(call by sharing，也叫按对象传递、按对象共享传递)。</p>
+<p>　　该策略的重点是：调用函数传参时，函数接受对象实参引用的副本(既不是按值传递的对象副本，也不是按引用传递的隐式引用)。 它和按引用传递的不同在于：在共享传递中对函数形参的赋值，不会影响实参的值。</p>
+<p>　　总之，基本类型是按值传递，而对于对象来说传入的是对象指向的地址，也可以认为其是特殊的按值传递。如果在函数内对对象的属性进行操作，实际就是对其指向对象的属性进行操作。但是，如果对其整体进行操作（比如：o = 100或者o = []），其实际是新定于了对象，实参的引用地址为新的对象的引用地址，与原来的引用没有任何关系，所以不会对原来的对象造成改变。</p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2018/02/28/Java-sleep和wait方法的区别/" rel="next" title="Java sleep和wait方法的区别">
+    下一篇：Java sleep和wait方法的区别
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
