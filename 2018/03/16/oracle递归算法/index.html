@@ -195,6 +195,14 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数据库/">
+                    数据库 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/生活/">
                     生活 <span class="right">1 篇</span></a>
                 </a>
@@ -238,6 +246,10 @@
         <span class="breadcrumb">当前位置（分类目录）</span>
         
             
+    
+    
+    <a class="breadcrumb" href="/categories/数据库/">数据库</a>
+
 
         
 
@@ -266,6 +278,14 @@
 </span>
 
             
+    <div class="tags-row">
+        
+            <a href="/tags/oracle/" class="chip pink lighten-1">oracle</a>
+        
+            <a href="/tags/递归/" class="chip pink lighten-1">递归</a>
+        
+    </div>
+
 
             <div class="toc pink-link-context hide-on-med-and-down">
     <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#oracle中-connect-by-prior-递归算法"><span class="section table-of-contents-text">oracle中 connect by prior 递归算法</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1．-树结构的描述"><span class="section table-of-contents-text">1． 树结构的描述</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2．-关于PRIOR"><span class="section table-of-contents-text">2． 关于PRIOR</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#3．-定义查找起始节点"><span class="section table-of-contents-text">3． 定义查找起始节点</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#4．使用LEVEL"><span class="section table-of-contents-text">4．使用LEVEL</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#5．节点和分支的裁剪"><span class="section table-of-contents-text">5．节点和分支的裁剪</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#6．排序显示"><span class="section table-of-contents-text">6．排序显示</span></a></li></ol></li></ol>
@@ -275,7 +295,7 @@
             <div class="entry pink-link-context">
                 <h1 id="oracle中-connect-by-prior-递归算法"><a href="#oracle中-connect-by-prior-递归算法" class="headerlink" title="oracle中 connect by prior 递归算法"></a>oracle中 connect by prior 递归算法</h1><p>Oracle中start with…connect by prior子句用法 connect by 是结构化查询中用到的，其基本语法是： </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select ... from tablename start with 条件1 </span><br><span class="line">connect by 条件2 </span><br><span class="line">where 条件3;</span><br></pre></td></tr></table></figure>
-<p>&lt;!more –&gt;</p>
+<p>&lt;!more–&gt;</p>
 <p>例： </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from table </span><br><span class="line">start with org_id = &apos;HBHqfWGWPy&apos; </span><br><span class="line">connect by prior org_id = parent_id;</span><br></pre></td></tr></table></figure>
 <p>简单说来是将一个树状结构存储在一张表里，比如一个表中存在两个字段:  </p>
