@@ -195,14 +195,6 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/数据库/">
-                    数据库 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/生活/">
                     生活 <span class="right">1 篇</span></a>
                 </a>
@@ -213,6 +205,22 @@
             <li class="collapse-level-1" collapse-level="1">
                 <a class="no-padding" href="/categories/生活/介绍/">
                     介绍 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数据库/">
+                    数据库 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/数据库/锁/">
+                    锁 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -295,7 +303,7 @@
             <div class="entry pink-link-context">
                 <h1 id="oracle中-connect-by-prior-递归算法"><a href="#oracle中-connect-by-prior-递归算法" class="headerlink" title="oracle中 connect by prior 递归算法"></a>oracle中 connect by prior 递归算法</h1><p>Oracle中start with…connect by prior子句用法 connect by 是结构化查询中用到的，其基本语法是： </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select ... from tablename start with 条件1 </span><br><span class="line">connect by 条件2 </span><br><span class="line">where 条件3;</span><br></pre></td></tr></table></figure>
-<p>&lt;!more–&gt;</p>
+<a id="more"></a>
 <p>例： </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from table </span><br><span class="line">start with org_id = &apos;HBHqfWGWPy&apos; </span><br><span class="line">connect by prior org_id = parent_id;</span><br></pre></td></tr></table></figure>
 <p>简单说来是将一个树状结构存储在一张表里，比如一个表中存在两个字段:  </p>
@@ -327,6 +335,12 @@
 <h2 id="6．排序显示"><a href="#6．排序显示" class="headerlink" title="6．排序显示"></a>6．排序显示</h2><p>象在其它查询中一样，在树结构查询中也可以使用ORDER BY 子句，改变查询结果的显示顺序，而不必按照遍历树结构的顺序 </p>
 
                 
+<p class="pink-link-context">
+    <a href="/2018/03/20/数据库乐观锁和悲观锁/" rel="next" title="数据库乐观锁和悲观锁">
+    上一篇：数据库乐观锁和悲观锁
+  </a>
+</p>
+
 
 
 <p class="pink-link-context">

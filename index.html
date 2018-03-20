@@ -195,14 +195,6 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/数据库/">
-                    数据库 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/生活/">
                     生活 <span class="right">1 篇</span></a>
                 </a>
@@ -213,6 +205,22 @@
             <li class="collapse-level-1" collapse-level="1">
                 <a class="no-padding" href="/categories/生活/介绍/">
                     介绍 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/数据库/">
+                    数据库 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/数据库/锁/">
+                    锁 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -278,6 +286,53 @@
             <div class="article-title">
                 
     
+        <h1 class="indigo-link-context"><a href="/2018/03/20/数据库乐观锁和悲观锁/">数据库乐观锁和悲观锁</a></h1>
+    
+
+
+            </div>
+
+            <time class="pink-link-context" datetime="2018-03-20T03:27:01.000Z"><a href="/2018/03/20/数据库乐观锁和悲观锁/">2018-03-20</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/数据库/" class="chip pink lighten-1">数据库</a>
+        
+            <a href="/tags/乐观锁/" class="chip pink lighten-1">乐观锁</a>
+        
+            <a href="/tags/悲观锁/" class="chip pink lighten-1">悲观锁</a>
+        
+    </div>
+
+
+
+            
+                <div class="entry pink-link-context">
+                    <h1 id="数据库乐观锁和悲观锁"><a href="#数据库乐观锁和悲观锁" class="headerlink" title="数据库乐观锁和悲观锁"></a>数据库乐观锁和悲观锁</h1><p>锁（ locking ）</p>
+<p>业务逻辑的实现过程中，往往需要保证数据访问的排他性。如在金融系统的日终结算处理中，我们希望针对某个 cut-off 时间点的数据进行处理，而不希望在结算进行过程中（可能是几秒种，也可能是几个小时），数据再发生变化。此时，我们就需要通过一些机制来保证这些数据在某个操作过程中不会被外界修改，这样的机制，在这里，也就是所谓的 “ 锁 ” ，即给我们选定的目标数据上锁，使其无法被其他程序修改。</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> Hibernate 支持两种锁机制：即通常所说的 “ 悲观锁（ Pessimistic Locking ） ”<br>和 “ 乐观锁（ Optimistic Locking ） ” 。</li>
+</ul>
+                </div>
+            
+        </div>
+
+        
+        <div class="card-action pink-link-context">
+            <a href="/2018/03/20/数据库乐观锁和悲观锁/">阅读全文</a>
+        </ div>
+        
+    </div>
+</article>
+
+    
+        <article class="simple-article">
+    <div class="card">
+        <div class="card-content">
+            <div class="article-title">
+                
+    
         <h1 class="indigo-link-context"><a href="/2018/03/16/oracle递归算法/">oracle递归算法</a></h1>
     
 
@@ -298,8 +353,17 @@
 
 
             
+                <div class="entry pink-link-context">
+                    <h1 id="oracle中-connect-by-prior-递归算法"><a href="#oracle中-connect-by-prior-递归算法" class="headerlink" title="oracle中 connect by prior 递归算法"></a>oracle中 connect by prior 递归算法</h1><p>Oracle中start with…connect by prior子句用法 connect by 是结构化查询中用到的，其基本语法是： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select ... from tablename start with 条件1 </span><br><span class="line">connect by 条件2 </span><br><span class="line">where 条件3;</span><br></pre></td></tr></table></figure>
+                </div>
+            
         </div>
 
+        
+        <div class="card-action pink-link-context">
+            <a href="/2018/03/16/oracle递归算法/">阅读全文</a>
+        </ div>
         
     </div>
 </article>
@@ -333,8 +397,20 @@
 
 
             
+                <div class="entry pink-link-context">
+                    <h2 id="JS是按值传递还是按引用传递"><a href="#JS是按值传递还是按引用传递" class="headerlink" title="JS是按值传递还是按引用传递"></a>JS是按值传递还是按引用传递</h2><p>　　按值传递(call by value)是最常用的求值策略：函数的形参是被调用时所传实参的副本。修改形参的值并不会影响实参。</p>
+<p>　　按引用传递(call by reference)时，函数的形参接收实参的隐式引用，而不再是副本。这意味着函数形参的值如果被修改，实参也会被修改。同时两者指向相同的值。</p>
+<p>　　按引用传递会使函数调用的追踪更加困难，有时也会引起一些微妙的BUG。</p>
+<p>　　按值传递由于每次都需要克隆副本，对一些复杂类型，性能较低。两种传值方式都有各自的问题。</p>
+<p>　　JS的基本类型，是按值传递的。</p>
+                </div>
+            
         </div>
 
+        
+        <div class="card-action pink-link-context">
+            <a href="/2018/03/07/JS按照值传递还是引用传递/">阅读全文</a>
+        </ div>
         
     </div>
 </article>
@@ -418,8 +494,27 @@
 
 
             
+                <div class="entry pink-link-context">
+                    <ul>
+<li><p>java是在服务器端运行的代码，而javascript和html都是在浏览器端运行的代码。所以加载执行顺序是是java&gt;js=html。</p>
+</li>
+<li><p>jsp中页面从上到下执行。</p>
+</li>
+<li><p>js加载的顺序也就是页面中script标签出现的顺序。script标签里面的或者是引入的外部js文件的执行顺序都是其语句出现的顺序，其中js执行的过程也是页面装载的一部分。</p>
+</li>
+<li><p>onload指示页面包含图片等文件在内的所有元素都加载完成。</p>
+</li>
+</ul>
+<hr>
+<p>   jquery的document.ready，或者简写的$(function)表示文档结构已经加载完成执行（不包含图片等非文字媒体文件）。</p>
+                </div>
+            
         </div>
 
+        
+        <div class="card-action pink-link-context">
+            <a href="/2018/02/23/jsp中页面加载执行顺序/">阅读全文</a>
+        </ div>
         
     </div>
 </article>
