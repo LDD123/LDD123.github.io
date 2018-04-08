@@ -7,7 +7,7 @@
 
     
 
-    <title>JavaScript | </title>
+    <title>http和https之间的区别 | </title>
     <meta name="author" content="李德东">
     
     <meta name="description" content="记录点滴">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="http和https之间的区别"/>
     <meta property="og:site_name" content="李德东的博客"/>
 
     
@@ -257,30 +257,119 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/网络协议/">网络协议</a>
+
 
         
-            <a class="breadcrumb" href="/categories/前端/JavaScript/">JavaScript</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>http和https之间的区别</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2018-04-08T07:44:07.000Z"><a href="/2018/04/08/http和https之间的区别/">2018-04-08</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2018/03/07/JS按照值传递还是引用传递/" class="collection-item grey-text text-darken-1">
-                <time datetime="2018-03-07T02:39:10.000Z">2018-03-07</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                JS按照值传递还是引用传递
-            </a>
+            <a href="/tags/http/" class="chip pink lighten-1">http</a>
+        
+            <a href="/tags/https/" class="chip pink lighten-1">https</a>
+        
+            <a href="/tags/网络协议/" class="chip pink lighten-1">网络协议</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#HTTP与HTTPS的区别"><span class="section table-of-contents-text">HTTP与HTTPS的区别</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#一、HTTP和HTTPS的基本概念"><span class="section table-of-contents-text">一、HTTP和HTTPS的基本概念</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#二、HTTP与HTTPS有什么区别？"><span class="section table-of-contents-text">二、HTTP与HTTPS有什么区别？</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#三、HTTPS的工作原理"><span class="section table-of-contents-text">三、HTTPS的工作原理</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#四、HTTPS的优点"><span class="section table-of-contents-text">四、HTTPS的优点</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#五、HTTPS的缺点"><span class="section table-of-contents-text">五、HTTPS的缺点</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#六、http切换到HTTPS"><span class="section table-of-contents-text">六、http切换到HTTPS</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="HTTP与HTTPS的区别"><a href="#HTTP与HTTPS的区别" class="headerlink" title="HTTP与HTTPS的区别"></a>HTTP与HTTPS的区别</h1><ul>
+<li>超文本传输协议HTTP协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。</li>
+<li>为了解决HTTP协议的这一缺陷,需要使用另一种协议：==安全套接字层超文本传输协议HTTPS==，为了数据传输的安全，HTTPS在HTTP的基础上加入了==SSL协议==，SSL依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</li>
+</ul>
+<a id="more"></a>
+<h2 id="一、HTTP和HTTPS的基本概念"><a href="#一、HTTP和HTTPS的基本概念" class="headerlink" title="一、HTTP和HTTPS的基本概念"></a>一、HTTP和HTTPS的基本概念</h2><ul>
+<li>HTTP：是互联网上应用最为广泛的一种网络协议，是一个客户端和服务器端请求和应答的标准（TCP），用于从WWW服务器传输超文本到本地浏览器的传输协议，它可以使浏览器更加高效，使网络传输减少。</li>
+<li>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</li>
+<li>HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性。</li>
+</ul>
+<h2 id="二、HTTP与HTTPS有什么区别？"><a href="#二、HTTP与HTTPS有什么区别？" class="headerlink" title="二、HTTP与HTTPS有什么区别？"></a>二、HTTP与HTTPS有什么区别？</h2><p>HTTP协议传输的数据都是未加密的，也就是明文的，因此使用HTTP协议传输隐私信息非常不安全，为了保证这些隐私数据能加密传输，于是网景公司设计了SSL（Secure Sockets Layer）协议用于对HTTP协议传输的数据进行加密，从而就诞生了HTTPS。简单来说，HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。<br>HTTPS和HTTP的区别主要如下：</p>
+<ol>
+<li>https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。</li>
+<li>http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl加密传输协议。</li>
+<li>http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。</li>
+<li>http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。<h2 id="三、HTTPS的工作原理"><a href="#三、HTTPS的工作原理" class="headerlink" title="三、HTTPS的工作原理"></a>三、HTTPS的工作原理</h2>我们都知道HTTPS能够加密信息，以免敏感信息被第三方获取，所以很多银行网站或电子邮箱等等安全级别较高的服务都会采用HTTPS协议。<br><img src="http://p4pm1p21u.bkt.clouddn.com/http%281%29.jpg" alt="image"><br>客户端在使用HTTPS方式与Web服务器通信时有以下几个步骤，如图所示。</li>
+<li>客户使用https的URL访问Web服务器，要求与Web服务器建立SSL连接。</li>
+<li>Web服务器收到客户端请求后，会将网站的证书信息（证书中包含公钥）传送一份给客户端。</li>
+<li>客户端的浏览器与Web服务器开始协商SSL连接的安全等级，也就是信息加密的等级。</li>
+<li>客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站。</li>
+<li>Web服务器利用自己的私钥解密出会话密钥。</li>
+<li>Web服务器利用会话密钥加密与客户端之间的通信。</li>
+</ol>
+<p><img src="http://p4pm1p21u.bkt.clouddn.com/http%282%29.gif" alt="image"></p>
+<h2 id="四、HTTPS的优点"><a href="#四、HTTPS的优点" class="headerlink" title="四、HTTPS的优点"></a>四、HTTPS的优点</h2><p>　　尽管HTTPS并非绝对安全，掌握根证书的机构、掌握加密算法的组织同样可以进行中间人形式的攻击，但HTTPS仍是现行架构下最安全的解决方案，主要有以下几个好处：</p>
+<ol>
+<li>使用HTTPS协议可认证用户和服务器，确保数据发送到正确的客户机和服务器；</li>
+<li>HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全，可防止数据在传输过程中不被窃取、改变，确保数据的完整性。</li>
+<li>HTTPS是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。</li>
+<li>谷歌曾在2014年8月份调整搜索引擎算法，并称“比起同等HTTP网站，采用HTTPS加密的网站在搜索结果中的排名将会更高”。<h2 id="五、HTTPS的缺点"><a href="#五、HTTPS的缺点" class="headerlink" title="五、HTTPS的缺点"></a>五、HTTPS的缺点</h2>　　虽然说HTTPS有很大的优势，但其相对来说，还是存在不足之处的：</li>
+<li>HTTPS协议握手阶段比较费时，会使页面的加载时间延长近50%，增加10%到20%的耗电；</li>
+<li>HTTPS连接缓存不如HTTP高效，会增加数据开销和功耗，甚至已有的安全措施也会因此而受到影响；</li>
+<li>SSL证书需要钱，功能越强大的证书费用越高，个人网站、小网站没有必要一般不会用。</li>
+<li>SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗。</li>
+<li>HTTPS协议的加密范围也比较有限，在黑客攻击、拒绝服务攻击、服务器劫持等方面几乎起不到什么作用。最关键的，SSL证书的信用链体系并不安全，特别是在某些国家可以控制CA根证书的情况下，中间人攻击一样可行。<h2 id="六、http切换到HTTPS"><a href="#六、http切换到HTTPS" class="headerlink" title="六、http切换到HTTPS"></a>六、http切换到HTTPS</h2>　　如果需要将网站从http切换到https到底该如何实现呢？</li>
+</ol>
+<p>这里需要将页面中所有的链接，例如js，css，图片等等链接都由http改为https。</p>
+<p>例如：<a href="http://www.baidu.com改为https://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com改为https://www.baidu.com</a></p>
+<p>　　BTW，这里虽然将http切换为了https，还是建议保留http。所以我们在切换的时候可以做http和https的兼容，具体实现方式是，去掉页面链接中的http头部，这样可以自动匹配http头和https头。例如：将<a href="http://www.baidu.com改为//www.baidu.com。然后当用户从http的入口进入访问页面时，页面就是http，如果用户是从https的入口进入访问页面，页面即使https的。" target="_blank" rel="noopener">http://www.baidu.com改为//www.baidu.com。然后当用户从http的入口进入访问页面时，页面就是http，如果用户是从https的入口进入访问页面，页面即使https的。</a></p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2018/03/20/数据库乐观锁和悲观锁/" rel="next" title="数据库乐观锁和悲观锁">
+    下一篇：数据库乐观锁和悲观锁
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
