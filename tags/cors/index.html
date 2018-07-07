@@ -7,7 +7,7 @@
 
     
 
-    <title>UNION与UNION ALL的区别 | </title>
+    <title>cors | </title>
     <meta name="author" content="李德东">
     
     <meta name="description" content="记录点滴">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="UNION与UNION ALL的区别"/>
+    
     <meta property="og:site_name" content="李德东的博客"/>
 
     
@@ -289,109 +289,30 @@
 
     <main>
         <div class="container main-container">
-    <nav class="page-nav hide-on-small-only">
+    
+
+<nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（分类目录）</span>
-        
-            
-    
-    
-    <a class="breadcrumb" href="/categories/数据库/">数据库</a>
-
-
+        <span class="breadcrumb">当前位置（标签）</span>
         
 
+        
+            <a class="breadcrumb" href="/tags/cors/">cors</a>
         
     </div>
 </nav>
 
-<article>
-    <div class="card">
-        <div class="card-content">
-            
-
-            <div class="article-title">
-                
-    
-        <h1>UNION与UNION ALL的区别</h1>
-    
 
 
-            </div>
-            <time class="pink-link-context" datetime="2018-03-16T15:08:45.000Z"><a href="/2018/03/16/UNION与UNION ALL的区别/">2018-03-16</a></time>
-
-            <span id="busuanzi_container_page_pv" class="read-times-container">
-    <i class="fa fa-eye"></i>
-    <span id="busuanzi_value_page_pv"></span>
-</span>
-
-            
-    <div class="tags-row">
+    <div class="collection mt-0">
         
-            <a href="/tags/oracle/" class="chip pink lighten-1">oracle</a>
-        
-            <a href="/tags/union/" class="chip pink lighten-1">union</a>
-        
-            <a href="/tags/union-all/" class="chip pink lighten-1">union all</a>
+            <a href="/2018/07/08/前端跨域处理方式/" class="collection-item grey-text text-darken-1">
+                <time datetime="2018-07-07T16:37:29.000Z">2018-07-08</time>
+                <span>&nbsp;&nbsp;&nbsp;</span>
+                前端跨域处理方式
+            </a>
         
     </div>
-
-
-            <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#SQL语句中：UNION与UNION-ALL的区别"><span class="section table-of-contents-text">SQL语句中：UNION与UNION ALL的区别</span></a></li></ol>
-</div>
-
-
-            <div class="entry pink-link-context">
-                <h1 id="SQL语句中：UNION与UNION-ALL的区别"><a href="#SQL语句中：UNION与UNION-ALL的区别" class="headerlink" title="SQL语句中：UNION与UNION ALL的区别"></a>SQL语句中：UNION与UNION ALL的区别</h1><p>UNION用的比较多union all是直接连接，取到得是所有值，记录可能有重复   union 是取唯一值，记录没有重复   </p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、UNION 的语法如下：</span><br><span class="line">     [SQL 语句 1]</span><br><span class="line">      UNION</span><br><span class="line">     [SQL 语句 2]</span><br><span class="line"></span><br><span class="line">2、UNION ALL 的语法如下：</span><br><span class="line">     [SQL 语句 1]</span><br><span class="line">      UNION ALL</span><br><span class="line">     [SQL 语句 2]</span><br></pre></td></tr></table></figure>
-<p>效率：<br>UNION和UNION ALL关键字都是将两个结果集合并为一个，但这两者从使用和效率上来说都有所不同。</p>
-<ol>
-<li><p>对重复结果的处理：UNION在进行表链接后会筛选掉重复的记录，Union All不会去除重复记录。</p>
-</li>
-<li><p>对排序的处理：Union将会按照字段的顺序进行排序；UNION ALL只是简单的将两个结果合并后就返回。</p>
-</li>
-</ol>
-<p>从效率上说，==UNION ALL 要比UNION快很多==，所以，如果可以确认合并的两个结果集中不包含重复数据且不需要排序时的话，那么就使用UNION ALL。</p>
-<p>简要回答：<br>UNION去重且排序;<br>UNION ALL不去重不排序</p>
-
-                
-<p class="pink-link-context">
-    <a href="/2018/03/16/数据库分页查询/" rel="next" title="Oracle中分页查询语句">
-    上一篇：Oracle中分页查询语句
-  </a>
-</p>
-
-
-
-<p class="pink-link-context">
-    <a href="/2018/03/16/关于变量 Objects...objects 和Object[] objects的区别/" rel="next" title="关于变量 Objects...objects 和Object[] objects的区别">
-    下一篇：关于变量 Objects...objects 和Object[] objects的区别
-  </a>
-</p>
-
-
-            </div>
-			
-        </div>
-    </div>
-</article>
-
-
-
-
-    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-    <script>
-      var cloudTieConfig = {
-        url: document.location.href,
-        sourceId: "",
-        productKey: "[object Object]",
-        target: "cloud-tie-wrapper"
-      };
-    </script>
-    <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-
 
 
 </div>
